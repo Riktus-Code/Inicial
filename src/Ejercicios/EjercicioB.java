@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class EjercicioB {
        public static void main(String[] args) {
+              //creamos las variables que vamos a necesitar
               Scanner scanner = new Scanner(System.in);
               System.out.print("Introduce la base imponible: ");
               double baseImponible = scanner.nextDouble();
@@ -16,7 +17,7 @@ public class EjercicioB {
               double iva = 0;
               double total = 0;
               double descuento = 0;
-
+              //calculamos el iva segun el tipo de iva
               if (tipoIva.equalsIgnoreCase("normal")) {
                      totalIva = baseImponible * 1.21;
                      iva = baseImponible * 0.21;
@@ -27,7 +28,7 @@ public class EjercicioB {
                      totalIva = baseImponible * 1.04;
                      iva = baseImponible * 0.04;
               }
-
+              //calculamos el el precio total(sabiendo el precio con el iva correcto) segun el codigo promocional
               if (codigoPromocional.equalsIgnoreCase("nopro")) {
                      total = totalIva;
               } else if (codigoPromocional.equalsIgnoreCase("mitad")) {
@@ -40,7 +41,7 @@ public class EjercicioB {
                      total = totalIva * 0.95;
                      descuento = -(totalIva * 0.05);
               }
-
+              //imprimimos los resultados
               System.out.println("Base imponible: " + baseImponible);
               System.out.println("IVA: " + iva);
               System.out.println("Precio con IVA: " + totalIva);
