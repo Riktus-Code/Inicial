@@ -26,11 +26,12 @@ public class EjercicioF {
         int [] dy = {-1,1,-1,1};
         System.out.println("El alfil puede moverser a las siguientes casillas: ");
         //pocibles movimientos del alfil
+        //recorremos las cuatro direcciones en las que puede ir el alfil(segun la posicion inicial)
         for (int i = 0; i < 4; i++) {
             int x = fila + dx[i];
             int y = columna + dy[i];
             while(x>=0 && x<8 && y>=0 && y<8){
-                //posiciones posibles
+                //impimimos los pobibles movimientos del alfil
                 System.out.print(tablero[x][y]+" ");
                 x+=dx[i];
                 y+=dy[i];
