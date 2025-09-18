@@ -21,7 +21,7 @@ public class EjercicioF {
 
         }
 
-        //movimentos del alfil
+        //movimentos del alfil (movimientos diagonales  )
         int [] dx = {-1,-1,1,1};
         int [] dy = {-1,1,-1,1};
         System.out.println("El alfil puede moverser a las siguientes casillas: ");
